@@ -161,7 +161,7 @@ $userData = $_SESSION['loggedIn'] ?? FALSE;
 <!-- NAV -->
 <nav class="navbar navbar-expand-lg shadow-nav nav-fixed p-0">
   <div class="container-fluid no-gutters nav100">
-    <a class="navbar-brand" href="index.php"> <img src="../img/logo/logo-trani.png" alt="Logo de Trani Ceramica" class="img-fluid logo"> </a>
+    <a class="navbar-brand" href="../index.php"> <img src="../img/logo/logo-trani.png" alt="Logo de Trani Ceramica" class="img-fluid logo"> </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
