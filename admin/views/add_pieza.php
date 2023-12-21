@@ -8,7 +8,8 @@ $colores = (new Color())->listado_completo();
 
 ?>
 
-<div class="row my-5">
+<div class="row my-5 p-4 mt-5 m-0 mx-auto">
+<div class="container">
 	<div class="col">
 
 		<h1 class="text-center pt-5 fw-bold h1Espaciado text-uppercase fs-3 color-panel"><?= $titulo ?></h1>
@@ -103,5 +104,6 @@ $colores = (new Color())->listado_completo();
 				<button type="submit" class="btn btn-dark d-block m-2 mt-4">Cargar</button>
 			</form>
 		</div>
+	</div>
 	</div>
 </div>
