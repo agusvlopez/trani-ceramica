@@ -60,7 +60,7 @@ $productos = (new Carrito())->get_carrito();
                 <a href="admin/actions/vaciar_carrito_acc.php" role="button" class="btn btn-secondary"> <img src="img/iconos/trash-icon.png" alt="Icono de tacho de basura"> </a>
                 <input type="submit" value="Actualizar Carrito" class="btn bgDorado">
                 <a href="index.php?link=piezas" role="button" class="btn btn-outline-dark rounded-0">Ver más productos</a>
-                <a href="index.php?link=login" role="button" class="btn bg-dark p-2 text-light text-uppercase rounded-0">Iniciar Compra</a>
+                <a href="index.php?link=panel_usuario" role="button" class="btn bg-dark p-2 text-light text-uppercase rounded-0">Iniciar Compra</a>
             </div>
 
         </form>

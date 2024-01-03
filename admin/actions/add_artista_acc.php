@@ -4,15 +4,6 @@ require_once "../../functions/autoload.php";
 $postData = $_POST;
 $fileData = $_FILES['imagen'];
 
-echo "<pre>";
-print_r($postData);
-echo "</pre>";
-
-// echo "<pre>";
-// print_r($fileData);
-// echo "</pre>";
-
-
 try {
 
     $imagen = (new Imagen())->subirImagen(__DIR__ . "/../../img/artistas", $fileData);
@@ -22,7 +13,7 @@ try {
         $postData['descripcion'],
         $imagen
     );
-    // // echo "<p>Se cargo el personaje correctamente</p>";
+    (new Alerta())->add_alerta('success', "El/la artista <strong>" . $postData['nombre'] ."</strong> se agregó correctamente");
      header('Location: ../index.php?link=admin_artistas');
 
 } catch (Exception $e){

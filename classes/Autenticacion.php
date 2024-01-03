@@ -16,7 +16,6 @@ class Autenticacion
 
     if($datosUsuario){
         if (password_verify($password, $datosUsuario->getPass())) {
-            echo "<p>EL PASSWORD ES CORRECTO! LOGUEAR!</p>";
             $datosLogin['username'] = $datosUsuario->getNombreUsuario();
             $datosLogin['id'] = $datosUsuario->getId();
             $datosLogin['roles'] = $datosUsuario->getRoles();

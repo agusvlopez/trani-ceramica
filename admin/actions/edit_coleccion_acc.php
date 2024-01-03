@@ -15,12 +15,14 @@ try {
 
     $coleccion->edit(
         $postData['nombre_coleccion'],
-        $postData['descripcion'],
+        $postData['descripcion_coleccion'],
        
     );
 
+    (new Alerta())->add_alerta('success', "La colección <strong>{$postData['nombre_coleccion']}</strong> se editó correctamente");
     header('Location: ../index.php?link=admin_coleccion');
 
 } catch (Exception $e){
-    echo "<p>No se pudo editar el artista</p>";
+    (new Alerta())->add_alerta('danger', "La colección <strong>{$postData['nombre']}</strong> no se pudo editar. Por favor intente nuevamente más tarde.");
+    header('Location: ../index.php?link=admin_coleccion');
 }

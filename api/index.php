@@ -1,5 +1,4 @@
 <?php 
-<?PHP
 require_once "functions/autoload.php";
 $secciones_validas = [
   "home" => [

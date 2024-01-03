@@ -12,9 +12,6 @@ try {
 
 
     $pieza->vaciar_colores_secundarios();
-    echo "<pre>";
-    print_r($pieza);
-    echo "</pre>";
 
     if (isset($postData['colores_de_piezas'])) {
         foreach ($postData['colores_de_piezas'] as $c_id) {
@@ -48,8 +45,6 @@ try {
 
 
 } catch (Exception $e){
-    echo "<pre>";
-    print_r($e->getMessage());
-    echo "<pre>";
-    echo "<p>No se pudo editar el artista</p>";
+    (new Alerta())->add_alerta('danger', "La pieza <strong>{$postData['titulo']}</strong> no se pudo editar correctamente. Por favor intente más tarde.");
+    header('Location: ../index.php?link=admin_piezas');
 }

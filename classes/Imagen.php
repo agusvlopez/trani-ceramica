@@ -6,9 +6,6 @@ class Imagen
 
 
     public function subirImagen($directorio, $datosArchivo): string{
-        echo "<pre>";
-        print_r($datosArchivo);
-        echo "</pre>";
 
         if (!empty($datosArchivo['tmp_name'])){
 

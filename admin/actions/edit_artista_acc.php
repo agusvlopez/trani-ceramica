@@ -37,6 +37,7 @@ try {
         $imagen
     );
 
+    (new Alerta())->add_alerta('success', "El/la artista <strong>{$postData['nombre']}</strong> se editó correctamente");
     header('Location: ../index.php?link=admin_artistas');
 
 } catch (Exception $e){

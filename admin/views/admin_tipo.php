@@ -8,7 +8,9 @@ $tipos = (new Tipo())->listado_completo();
     </h1>
 </div>
 <div class="container">
-
+    <div>
+        <?= (new Alerta())->get_alertas(); ?>
+    </div>
     <div class="pt-3 p-2">
     <table class="table table-striped">
         <thead>

@@ -52,6 +52,10 @@ $secciones_validas = [
   "resumen_pago" => [
     "titulo" => "¡Gracias por comprar en Trani Cerámica!",
     "restringido" => TRUE
+  ],
+  "respuesta_mail" => [
+    "titulo" => "¡Gracias por contactarte con Trani Cerámica",
+    "restringido" => TRUE
   ]
 ];
 
@@ -77,7 +81,10 @@ $tipos = (new Pieza())->listar_tipos_piezas();
 
 $userData = $_SESSION['loggedIn'] ?? FALSE;
 
-
+foreach ($userData as $user) { 
+  $nombre_usuario = $user;
+  break; 
+}
 ?>
 
 
@@ -149,21 +156,24 @@ $userData = $_SESSION['loggedIn'] ?? FALSE;
           <a class="nav-link text-uppercase nav-font" href="?link=alumna">Alumna</a>
         </li>
        
-        <li class="nav-item ms-3">
+        <li class="nav-item ms-3 mb-1">
           <a class="nav-link text-uppercase nav-font bgDorado text-light ms-lg-3 p-2" href="admin">Admin</a>
         </li>
 
-        <li class="nav-item">
-          <a class="nav-link text-uppercase nav-font bg-dark text-light ms-lg-3 nav-item rounded-1 <?= $userData ? "d-none" : "" ?>" href="index.php?link=login">Login</a>
+        <li class="nav-item mb-1">
+          <a class="nav-link text-uppercase nav-font bg-dark text-light ms-lg-3 nav-item rounded-1 p-2 <?= $userData ? "d-none" : "" ?>" href="index.php?link=login">Login</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link text-uppercase nav-font bg-dark text-light ms-lg-3 nav-item rounded-1 <?= $userData ? "" : "d-none" ?>" href="admin/actions/auth_logout.php">Logout</a>
+        <li class="nav-item mb-1">
+          <a class="nav-link text-uppercase nav-font bg-dark text-light ms-lg-3 nav-item rounded-1 p-2 <?= $userData ? "" : "d-none" ?>" href="admin/actions/auth_logout.php">Logout</a>
         </li>
        
         <li class="nav-item ms-3">
           <a class="nav-link nav-font p-2 me-2 text-center" href="?link=carrito"><img src="./img/iconos/carrito-icon.png" alt="Icono de carrito"></a>
         </li>
 
+        <li class="nav-item ms-3">
+          <a class="nav-link nav-font p-2 me-2 text-center" href="?link=panel_usuario"><?=$usuario ?><img src="./img/iconos/usuario-icon.png" alt="perfil"><span class="ms-2"><?= $nombre_usuario ?></span></a>
+        </li>
       </ul>
 
     </div>
